@@ -1,6 +1,7 @@
-# Previsão de Vendas Rede de Farmácia ROSSMANN
 
-[ROSSMANN][caminho imagem logo rossman]
+![Rossmann_Logo svg](https://github.com/TiagoDSL/previsao_vendas_rossmann/assets/99509388/5386f439-16a9-4f6b-88e1-9b53a8f8f130)
+
+# Previsão de Vendas da Rede de Farmácia ROSSMANN
 
 ## Descrição
 
@@ -37,7 +38,8 @@ Para contruir a solução, as seguintes premissas foram consideradas:
 Para assegurar uma entrega rápida e eficiente da primeira solução, agregando valor à empresa e permitindo decisões ágeis por parte do CEO,
 foi adotado o método CRISP-DM.
 
-[imagem metodo crisp]
+![ciclo_CRISP](https://github.com/TiagoDSL/previsao_vendas_rossmann/assets/99509388/cd85b14b-09dd-4a67-bbdc-310c7ab13bd3)
+
 
 O CRISP-DM (Cross-Industry Standard Process for Data Mining) é uma metodologia padrão amplamente utilizada para projetos de mineração de dados. 
 Ele define seis fases principais:
@@ -83,8 +85,7 @@ Durante a Analise Exproratoria também é feita a Feature Engineering com a cria
 
 Para orientar a Anallise Exploratória, foi criado hipoetes com a ajuda de um Mindmap, com a finalidade de ser ter um entendimento maior sobre o negócio.
 
-[imagem mapa mental]
-
+![mind_map_hip](https://github.com/TiagoDSL/previsao_vendas_rossmann/assets/99509388/bcdcb01c-d62e-4086-a69b-cd1faeb222c7)
 
 
 As principais hipoteses que foram testadas:
@@ -111,37 +112,46 @@ As principais hipoteses que foram testadas:
 **11.** Lojas deveriam vender menos aos finais de semana.
 
 **12.** Lojas deveriam vender menos durante os feriados escolares.
+
+
  
-### Análise Univariada 
+###  Análise Univariada 
 Na analise univariada, foi realizado a pltagem de um gráfico para que pudesse ter um melhor entendimento da distribuição das váriaveis.
 
   [imagem histograma]
 
-### Análise Bivariada
+###  Análise Bivariada
 
 A análise bivariada (comparando uma variável explicativa com a variável resposta) foi utilizada para verificar as hipóteses de negócio previamente definidas no mapa mental de hipóteses. Além disso, extraímos insights importantes sobre o negócio com base nos resultados encontrados.
 
 Principais insights sobre o negócio:
 
-- **Lojas com maior sortimento vendem menos**;
-                [imagem H1]
+- **Lojas com maior sortimento vendem menos**(Lojas com maioir número de variedades de produtos):
+         
+![H1](https://github.com/TiagoDSL/previsao_vendas_rossmann/assets/99509388/79246fa1-3132-442e-95a1-7a77c5ad871c)
 
-- **Lojas com competidores mais próximos vendem mais** (Essa observação indica que a concorrência é mais intensa para estabelecimentos próximos a shoppings e galerias);
-         [imagem H2]
+- **Lojas com competidores mais próximos vendem mais** (Essa observação indica que a concorrência é mais intensa para estabelecimentos próximos a shoppings e galerias):
 
-- **Lojas com mais promoções consecutivas vendem menos**;
-         [imagem H3]
+![H2](https://github.com/TiagoDSL/previsao_vendas_rossmann/assets/99509388/5f334646-9752-4716-bed0-14ab007ec47e)
 
-- **Lojas abertas durante o feriado de natal vendem menos**;
-         [imagem H4]
+- **Lojas com mais promoções consecutivas vendem menos**:
+  
+![H3](https://github.com/TiagoDSL/previsao_vendas_rossmann/assets/99509388/df9827d9-d0bd-4216-ad6a-83c0749dfb55)
 
-- **Lojas vendem menos nos finais de semana**
-        [imagem H5]
+- **Lojas abertas durante o feriado de natal vendem menos**:
+
+![H4](https://github.com/TiagoDSL/previsao_vendas_rossmann/assets/99509388/78e6f139-81b1-41bb-b951-af9c0bc185a3)
+
+- **Lojas vendem menos nos finais de semana**:
+
+![H5](https://github.com/TiagoDSL/previsao_vendas_rossmann/assets/99509388/11751920-7e6e-45c4-80be-e95b049570e4)
+
+Leg: **1**: Segunda; **2**: Terça; **3**: Quarta; **4**: Quinta; **5**: Sexta; **6**: Sábado; **7**: Domingo.
 
 ### Analise multivariada
 Com a análise multivariada conseguimos identificar quais variáveis têm um impacto significativo na predição das vendas. Além disso, ela ajuda a entender quais variáveis estão mais correlacionadas entre si, o que é importante para detectar multicolinearidade, um fenômeno que pode afetar a precisão dos modelos. Neste caso, utilizamos a correlaçao de Pearson.
 
-    [imagem correlação]
+![correlacao](https://github.com/TiagoDSL/previsao_vendas_rossmann/assets/99509388/cec2a065-e70e-4398-a1b0-086cbdfdaaeb)
 
 
 ## Modelagem dos Dados
@@ -150,7 +160,7 @@ Na etapa de modelagem dos dados, os dados foram preparados para o modelo de Mach
 ## Seleção de Features 
 Nessa etapa de seleção de features, foi utilizada um modelo de Random Forest para a seleção de features mais relevantes. Na seleção de features com Random Forest, várias árvores de decisão são construídas usando diferentes conjuntos de variáveis. Cada árvore calcula a importância das variáveis ao prever os resultados. As variáveis mais importantes são identificadas com base na contribuição para a precisão do modelo, ajudando a eliminar aquelas menos relevantes ou redundantes. Isso melhora a eficiência e a precisão das previsões sem depender de abordagens como o Boruta, que usa permutações aleatórias para comparação.
 
-## Algopritmos de Machine Learning 
+## Algoritmos de Machine Learning 
 Dado que o problema do projeto envolve regressão, optamos por selecionar os seguintes modelos de machine learning para avaliar seu desempenho nos dados e prever resultados com maior precisão:
 - Avarege Model (usado para ser ter um bass line de perfomance);
 - Linear Regression;
@@ -163,9 +173,10 @@ Nessa abordagem, os dados de validação são divididos em blocos, sendo que cad
 Após a avaliação, o bloco volta a ser incorporado aos dados de treino. Dessa forma, cada conjunto de 6 semanas é utilizado como conjunto de teste em algum momento durante a avaliação do modelo. 
 A principal vantagem dessa técnica é aumentar a confiabilidade na medição dos modelos, garantindo que a performance não dependa exclusivamente de um único conjunto específico de dados.
 
-    [imagem cross val]
+![cross_val](https://github.com/TiagoDSL/previsao_vendas_rossmann/assets/99509388/ce76f7d1-3dd3-450f-b952-d5b1a0aaacd8)
 
-## Avaliação de performance dos Modelos de MAchine Learning 
+
+## Avaliação de Performance dos Modelos de Machine Learning 
 Para avaliar a perfomance dos modelos, foram utilizadas as seguintes métricas:
 - **MAE** (Mean Absolute Error): Calcula a média absoluta dos erros de previsão em relação aos valores originais.
 - **MAPE** (Mean Absolute Percentage Error): Mede o erro médio em termos de porcentagem em relação aos valores reais.
@@ -173,7 +184,8 @@ Para avaliar a perfomance dos modelos, foram utilizadas as seguintes métricas:
 
 Apos rodas os modelos e realizar a aplicaçlão do Cross-Validations, a perfomance apresentada pelos modelos foi a seguinte:
 
-[imagem performance apos cross]
+   ![performance-pos-cross](https://github.com/TiagoDSL/previsao_vendas_rossmann/assets/99509388/ee454a0d-e26a-4cb1-9050-39da44b4bef0)
+
 
 ### Escolha do modelo
 Por ter apresentado a melhor perfomance, o modelo escolhido foi a Random Forest Regressor. 
@@ -185,27 +197,28 @@ Em vez de testar todas as combinações possíveis de hiperparâmetros, o que po
 o random search seleciona aleatoriamente combinações para avaliação. Isso pode levar a resultados eficientes em termos de tempo e recursos, 
 frequentemente encontrando boas soluções sem a necessidade de explorar todas as opções disponíveis.
 
-## Desempenho do algoritmo
+## Desempenho do Algoritmo
 Ao analisarmos o gráfico de desempenho do algoritmo, podemos observar que os dois primeiros gráficos abaixo mostram que o modelo consegue capturar o comportamento cíclico das vendas. 
 No entanto, também é evidente que em alguns períodos a taxa de erro é mais elevada.
 
 Nos dois últimos gráficos, a distribuição das previsões parece seguir uma distribuição normal. 
 No quarto gráfico, notamos que muitas previsões se destacam das outras, indicando a presença de valores discrepantes.
 
-  [imagem desempenho ]
+![desempenho](https://github.com/TiagoDSL/previsao_vendas_rossmann/assets/99509388/557922d2-83fb-4955-a7df-0441b5b6e2e2)
+
 
 ## Perfomance Final do Modelo apos o Ajuste
-Rersultado final do algoritmo apos todos os ajustes e validações:
+Rersultado final do algoritmo após todos os ajustes e validações:
 
-   [imagem resultado final ]
+![imagem-result-final-rf](https://github.com/TiagoDSL/previsao_vendas_rossmann/assets/99509388/3982096e-692b-4a7a-b086-fd2d32f19639)
 
 
 ## Tradução do modelo para o resultado do negocio
-Alem de montar um algoritmo que realize previsoes de forma bem precisa, é de grande importancia que nos, cientistas de dados, consigamos traduz o resultado do algoritmo
-para o o resultado financiero. É dessa forma que apresentamos o resutado do modelo em termo de negocios para o time de negocios
-Definimos dois cenarios que podem acontecer com base das previsoes, para que se possa ter uma melhor visao de negocios para a tomada de decisão.
- 
-[imagem cenarios]
+Além de desenvolver um algoritmo preciso para previsões, é crucial para nós, cientistas de dados, traduzir os resultados do algoritmo em termos financeiros. Dessa forma, apresentamos os resultados do modelo para a equipe de negócios. Definimos diferentes cenários baseados nas previsões, proporcionando uma visão clara para a tomada de decisões estratégicas.
+
+![cenarios](https://github.com/TiagoDSL/previsao_vendas_rossmann/assets/99509388/4e96f382-2970-40aa-8061-b9a90cb35d20)
+
+
 
 ## Conclusão
 Ao concluir esta primeira aplicação do método CRISP-DM para este projeto, podemos prever que as 1.115 lojas da rede Rossmann faturarão aproximadamente R$ 290 milhões nas próximas seis semanas, com um erro aproximado de 12,4%.
@@ -213,20 +226,24 @@ Ao concluir esta primeira aplicação do método CRISP-DM para este projeto, pod
 O modelo conseguiu capturar bem o comportamento das vendas na maioria das lojas, embora o desempenho não tenha sido uniforme em todas elas. Seria interessante para o CEO priorizar as lojas que apresentaram melhor desempenho.
 
 ## Proximos Passos
-- Realizar a criação de um bot no telegram para que o CEo possa consultar as previsoes da lojas;
+- Realizar a criação de um bot no telegram para que o CEO possa consultar as previsoes da lojas;
 - Realizar o teste de outros algoritmons de macinhe learning e observar se a perfomance irá melhorar;
 - Realizar uma investigação para identificar as possíveis causas de algumas lojas nao terem um bom desempenho nas previsoes;
 - Criar novas variáveis que possam contribuir para o desempenho do modelo, sem comprometer a dimensionalidade;
 - Realizar o levantamentos de novas hipoteses, a fim de identificar novos insights 
 
-## Tecnologias utilizadas 
-- pyhton
-- pandas
-- numpy
-- seaborn
-- matplotlib
-- scikit learn
-- VScode
-- Jupyter Notebook
-- Anaconda
-- Git
+## Tecnologias Utilizadas 
+
+<img src="https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white" alt="Mac OS badge"> 
+<img src="https://img.shields.io/badge/conda-342B029.svg?&style=for-the-badge&logo=anaconda&logoColor=white">
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"> 
+<img src="https://img.shields.io/badge/Vscode-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white">
+<img src="https://img.shields.io/badge/Jupyter-F37626.svg?&style=for-the-badge&logo=Jupyter&logoColor=white">
+<img src="https://img.shields.io/badge/NumPy-013243.svg?style=for-the-badge&logo=NumPy&logoColor=white">
+<img src="https://img.shields.io/badge/pandas-150458.svg?style=for-the-badge&logo=pandas&logoColor=white">
+<img src="https://img.shields.io/badge/scikitlearn-F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white">
+<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">
+<img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=Kaggle&logoColor=white">
+
+- Seaborn: :bar_chart: 
+- Matplotlib: :chart_with_upwards_trend: 
