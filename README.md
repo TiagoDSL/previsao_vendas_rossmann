@@ -126,10 +126,6 @@ A análise bivariada (comparando uma variável explicativa com a variável respo
 
 Principais insights sobre o negócio:
 
-- **Lojas com maior sortimento vendem menos**(Lojas com maioir número de variedades de produtos):
-         
-![H1](https://github.com/TiagoDSL/previsao_vendas_rossmann/assets/99509388/79246fa1-3132-442e-95a1-7a77c5ad871c)
-
 - **Lojas com competidores mais próximos vendem mais** (Essa observação indica que a concorrência é mais intensa para estabelecimentos próximos a shoppings e galerias):
 
 ![H2](https://github.com/TiagoDSL/previsao_vendas_rossmann/assets/99509388/5f334646-9752-4716-bed0-14ab007ec47e)
@@ -138,15 +134,12 @@ Principais insights sobre o negócio:
   
 ![H3](https://github.com/TiagoDSL/previsao_vendas_rossmann/assets/99509388/df9827d9-d0bd-4216-ad6a-83c0749dfb55)
 
-- **Lojas abertas durante o feriado de natal vendem menos**:
-
-![H4](https://github.com/TiagoDSL/previsao_vendas_rossmann/assets/99509388/78e6f139-81b1-41bb-b951-af9c0bc185a3)
-
 - **Lojas vendem menos nos finais de semana**:
 
 ![H5](https://github.com/TiagoDSL/previsao_vendas_rossmann/assets/99509388/11751920-7e6e-45c4-80be-e95b049570e4)
 
 Leg: **1**: Segunda; **2**: Terça; **3**: Quarta; **4**: Quinta; **5**: Sexta; **6**: Sábado; **7**: Domingo.
+
 
 ### Analise multivariada
 Com a análise multivariada conseguimos identificar quais variáveis têm um impacto significativo na predição das vendas. Além disso, ela ajuda a entender quais variáveis estão mais correlacionadas entre si, o que é importante para detectar multicolinearidade, um fenômeno que pode afetar a precisão dos modelos. Neste caso, utilizamos a correlaçao de Pearson.
@@ -230,7 +223,8 @@ O modelo conseguiu capturar bem o comportamento das vendas na maioria das lojas,
 - Realizar o teste de outros algoritmons de macinhe learning e observar se a perfomance irá melhorar;
 - Realizar uma investigação para identificar as possíveis causas de algumas lojas nao terem um bom desempenho nas previsoes;
 - Criar novas variáveis que possam contribuir para o desempenho do modelo, sem comprometer a dimensionalidade;
-- Realizar o levantamentos de novas hipoteses, a fim de identificar novos insights 
+- Realizar o levantamentos de novas hipoteses, a fim de identificar novos insights;
+- Resolver o problema de data leakage.
 
 ## Tecnologias Utilizadas 
 
