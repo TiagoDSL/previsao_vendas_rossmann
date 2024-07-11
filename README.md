@@ -118,7 +118,8 @@ As principais hipoteses que foram testadas:
 ###  Análise Univariada 
 Na analise univariada, foi realizado a pltagem de um gráfico para que pudesse ter um melhor entendimento da distribuição das váriaveis.
 
-  [imagem histograma]
+ ![histograma](https://github.com/user-attachments/assets/b90a9ab6-6ac8-43f0-bfb4-cd40dbef1957)
+
 
 ###  Análise Bivariada
 
